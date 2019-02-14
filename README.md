@@ -3,6 +3,9 @@
 -- create wetaher using 'openWeather' this api consuming and consult, list different citys and countries,
 -- the style UI is 100% pure scss not framework UI
 
+# Search citys and countries
+this component detail city for search city and country
+
 
 # Weather next steps use
 
