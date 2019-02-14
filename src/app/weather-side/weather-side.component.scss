@@ -1,0 +1,32 @@
+@import '/../../../src/sass/variables';
+@import '/../../../src/sass/mixins';
+
+.side-bar-view {
+  color: $colorFont;
+
+  .container-div {
+    @include container-div-shadow;
+    min-height: 45vh;
+    align-items: flex-start;
+  }
+  
+  h1 {
+    margin: 24px auto;
+    color: #3c4a5b;
+  }
+
+  .container-title {
+      font-weight: 400;
+  }
+
+  .container-item {
+    line-height: 20px;
+    height: 24px;
+  }
+  
+  li:last-child {
+    margin-bottom: 24px;
+  }
+
+
+}

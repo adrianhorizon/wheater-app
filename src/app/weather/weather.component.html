@@ -1,0 +1,38 @@
+<div *ngIf="weather" class="weather-view">
+  <div class="container-weather">
+    <h1 class="weather-title">{{ weather.name | titlecase }}</h1>
+    <div>
+      <h2 class="sub-title">{{ weather.main.temp}} ºF
+        <img class="img-cloud" *ngFor="let item of weather.weather" src="http://openweathermap.org/img/w/{{item.icon}}.png">
+      </h2>
+    </div>
+    <div>
+      <img width="100">
+    </div>
+    <div class="columns">
+      <div class="column">
+        <h2 class="title-style-h2">Wind</h2>
+        <p>{{weather.wind.speed}} m/s</p>
+      </div>
+      <div class="column">
+        <h2 class="title-style-h2">Coord</h2>
+        <div class="container-item-type">
+          {{weather.coord.lat}}
+          {{weather.coord.lon}}
+        </div>
+      </div>
+      <div class="column">
+        <h2 class="title-style-h2">Humidity </h2>
+        <div class="container-abilities">
+          {{ weather.main.humidity}}%
+        </div>
+      </div>
+      <div class="column">
+        <h2 class="title-style-h2">Pressure</h2>
+        <div class="container-stats">
+          {{ weather.main.pressure}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<top-bar></top-bar>
+<div *ngIf="weathers">
+  <div class="container-home">
+    <div *ngFor="let item of weathers.list" class="container-weather-style" id="bright">
+      <div class="section-container" [routerLink]="['/detail', item.name]">
+        <div class="weather-header">
+          <img class="img-city" src="https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+          <h1>
+            <a class="link-title">{{item.name}}, {{item.sys.country}}</a>
+          </h1>
+          <h4>{{item.main.temp}} ºF</h4>
+          <span class="humidity">humidity: {{item.main.humidity}}%</span>
+          <p class="type">Wind: {{item.wind.speed}} m/s</p>
+        </div>
+        <div class="weather-content">
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+        </div>
+        <div class="weather-icon">
+          <ul>
+            <li><i class="fas fa-cloud-sun-rain"></i></li>
+            <li><i class="fas fa-cloud-sun"></i></li>
+            <li><i class="fas fa-cloud-showers-heavy"></i></li>
+            <li><i class="fas fa-cloud-rain"></i></li>
+            <li><i class="fas fa-cloud-moon-rain"></i></li>
+            <li><i class="fas fa-cloud-moon"></i></li>
+            <li><i class="fas fa-cloud-meatball"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wallpaper-style wallpaper-city"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+@import '../../../src/sass/variables';
+@import '../../../src/sass/mixins';
+
+.weather-view {
+
+  .weather-container {
+    background: $colorBackground; 
+    min-height: 100vh;
+  }
+
+  .container-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+
+    .style-input {
+      padding: 10px 25px;
+      border: 2px solid $colorGreen;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      color: $colorGreen;
+      width: 220px;
+
+      &:focus {
+        outline: none;
+        transition-duration: .7s;
+        transition-delay: .6s;
+        border: 2px solid $colorPrimary;
+        color: $blueGradient;
+      }
+
+      &::placeholder {
+        opacity: 0.5;
+        font-weight: 200;
+      }
+    }
+  }
+
+  .section {
+    clear: both;
+    margin: 0px;
+    grid-gap: 1vw;
+    padding: 1vw;
+  }
+
+  .col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.8%;
+  }
+
+  .col:first-child {
+    margin-left: 50;
+  }
+
+  .group:before,
+  .group:after {
+    content: "";
+    display: table;
+  }
+
+  .group:after {
+    clear: both;
+  }
+
+  .group {
+    zoom: 1;
+  }
+
+  .span_2_of_2 {
+    width: 100%;
+  }
+
+  .span_1_of_2 {
+    width: 30%;
+  }
+
+  .span_1_of_2:first-child {
+    width: 60%;
+  }
+
+  @media only screen and (max-width: $layout-xs) {
+
+    .col {
+      margin: 1% 0 1% 0%;
+    }
+  }
+
+  @media screen and (max-width: $layout-xs) {
+
+    .span_2_of_2,
+    .span_1_of_2 {
+      width: 100%;
+    }
+
+    .span_1_of_2:first-child {
+      width: 100%;
+    }
+
+    .input-form {
+      width: 100%;
+    }
+  }
+
+  @media screen and(max-width: $layout-xs) {
+    .add-detail {
+      display: none;
+    }
+  }
+
+  @media screen and(min-width: $layout-xs) {
+    .add-detail {
+      @include add-icon-style;
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+}

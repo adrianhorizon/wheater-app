@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+    app:
+        image: 'weather'
+        build: '.'
+        ports:
+            - 4200:80
+        environment:
+          NODE_ENV: production

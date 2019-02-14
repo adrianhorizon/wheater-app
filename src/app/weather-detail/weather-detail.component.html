@@ -1,0 +1,20 @@
+<div class="weather-view">
+    <div class="weather-container">
+      <div class="container-form">
+        <form (submit)="submitWeather($event)">
+          <input class="style-input" type="text" placeholder="Search city " name="id">
+        </form>
+      </div>
+      <div class="section group">
+        <div class="col span_1_of_2">
+          <weather [weather]="weather"></weather>
+        </div>
+        <div class="col span_1_of_2">
+          <weather-side [weather]="weather"></weather-side>
+        </div>
+      </div>
+    </div>
+    <a [routerLink]="['/']" class="add-detail">
+      <i class="fas fa-chevron-circle-left fa-4x"></i>
+    </a>
+  </div>

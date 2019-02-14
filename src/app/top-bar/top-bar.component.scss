@@ -1,0 +1,11 @@
+@import '../../../src/sass/variables';
+@import '../../../src/sass/mixins';
+
+.container-top-bar{
+    .container-city {
+        text-align: center;
+        color: $colorGreen;
+        font-weight: 400;
+        font-size: 46px;
+    }
+}

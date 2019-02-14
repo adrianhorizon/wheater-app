@@ -1,0 +1,11 @@
+<div class="side-bar-view" *ngIf="weather">
+    <div class="container-div">
+      <h1 class="container-title">5 day forecast</h1>
+      <div class="container-item">
+        <ul>
+          <li>weather {{weather.main.temp}} ºF</li>
+          <li>winds {{weather.wind.speed}} m/s</li>
+        </ul>
+      </div>
+    </div>
+  </div>

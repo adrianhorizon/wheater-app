@@ -1,27 +1,28 @@
-# Wheater
+# Weather app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+-- create wetaher using 'openWeather' this api consuming and consult, list different citys and countries,
+-- the style UI is 100% pure scss not framework UI
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Weather next steps use
 
-## Code scaffolding
+ 1. yarn install or npm install
+ 2. yarn start or npm start : run project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Skills
 
-## Build
+ Angular 7
+ Webpack
+ RXJS
+ SCSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Using Docker
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ three methods steps using docker.
+ 
+ 1. docker local the next steps
+  - npm run build or ng build --prod or yarn build : generate build dist
+  - docker image build -t weather .
+  - docker run -p 4200:80 --rm weather
+ 
+this step two is reference create and generate container name weather. Third step is run localhost machine is port 3000 example localhost:3000
